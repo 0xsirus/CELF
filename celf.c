@@ -556,12 +556,12 @@ void parse_elf_header(Elf64_Ehdr *ehdr){
     printf("Processor specific flags:\t0x%08X\n",ehdr->e_flags);
     printf("Header table size:\t\t%d\n",ehdr->e_ehsize);
     printf("PHT entry size:\t\t\t%d\n",ehdr->e_phentsize);
-    printf("PHT entries count:\t\t\%d\n",ehdr->e_phnum);
+    printf("PHT entries count:\t\t%d\n",ehdr->e_phnum);
     ph_ent_num = ehdr->e_phnum;
     printf("SHT entry size:\t\t\t%d\n",ehdr->e_shentsize);
-    printf("SHT entries count:\t\t\%d\n",ehdr->e_shnum);
+    printf("SHT entries count:\t\t%d\n",ehdr->e_shnum);
     sht_count = ehdr->e_shnum;
-    printf("SHT str-tbl index:\t\t\%d [INDEX IN SHT]\n",ehdr->e_shstrndx);
+    printf("SHT str-tbl index:\t\t%d [INDEX IN SHT]\n",ehdr->e_shstrndx);
     section_str_tbl_index = ehdr->e_shstrndx;
 }
 void parse_section_table(unsigned char *_file){
