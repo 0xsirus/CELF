@@ -72,7 +72,7 @@ typedef struct
     Elf64_Xword             r_info;             /* Symbol index and type of relocation */
     Elf64_Sxword            r_addend;           /* Constant part of expression */
 } Elf64_Rela_entry;
-typedef struct  //for symbol tables (.dynsym and .dynstr)
+typedef struct  
 {
     Elf64_Word              st_name;
     unsigned char           st_info;
@@ -81,7 +81,7 @@ typedef struct  //for symbol tables (.dynsym and .dynstr)
     Elf64_Addr              st_value;
     Elf64_Xword             st_size;
 } Elf64_Sym_entry;
-typedef struct { //for .dynamic section -> PT_DYNAMIC header
+typedef struct { 
 	Elf64_Sxword	d_tag;
    	union {
    		Elf64_Xword	d_val;
@@ -89,7 +89,7 @@ typedef struct { //for .dynamic section -> PT_DYNAMIC header
 	} d_un;
 } Elf64_Dyn_entry;
 
-typedef struct {    //Program header holds only an array of these entries
+typedef struct {    
 	Elf64_Word	p_type;
 	Elf64_Word	p_flags;
 	Elf64_Off	p_offset;
